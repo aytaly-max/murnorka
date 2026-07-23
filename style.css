@@ -1,0 +1,498 @@
+@font-face {
+    font-family: "Kudry";
+    src: url("fonts/Kudry.woff") format("woff");
+}
+
+@font-face {
+    font-family: "RussischeElsevier";
+    src: url("fonts/RussischeElsevier.woff") format("woff");
+}
+
+@font-face {
+    font-family: "baskervillebold";
+    src: url("fonts/baskervillebold.woff") format("woff");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/*  ОБЩЕЕ */
+
+body {
+    font-family: "RussischeElsevier", serif;
+    background: #F8F8F6;
+    color: #1E1E1E;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/*  HEADER */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 100;
+}
+
+.header-container {
+    width: 100%;
+    max-width: 1000px;
+    height: 88px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 30px;
+}
+
+.header-left {
+    display: flex;
+    gap: 20px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 7px;
+}
+
+.logo img {
+    display: block;
+    height: 32px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    
+    gap: 20px;
+    
+}
+
+.navigation-list {
+    display: flex;
+    gap: 20px;
+    
+}
+
+.navigation-list a {
+    font-size: 16px;
+    color: #1E1E1E;
+}
+
+.navigation-list a.active {
+    border-bottom: 0.1px solid #587495;
+    padding-bottom: 0.8px;
+    color: #587495;
+}
+
+.cart {
+    margin-left: auto;
+    padding-bottom: 7px;
+}
+
+.cart img {
+    display: block;
+    width: 24px;
+}
+
+/*  HERO */
+
+.hero {
+    position: relative;
+    min-height:583px;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: none;
+}
+
+.hero-content {
+    position: absolute;
+    z-index: 8;
+    padding: 322px 0;
+    max-width: 520px;
+}
+
+.hero h1 {
+    font-family: "Kudry", serif;
+    font-size: 107px;
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: 3%;
+}
+
+.aboutcollection {
+    width: 100%;
+    padding: 30px 0;
+    font-size: 32px;
+    line-height: 1.35;
+}
+
+.aboutcollection p {
+    width: 85%;
+    font-size: 32px;
+    line-height: 1.33;
+}
+
+/* COLLECTION */
+
+.collection {
+    position: relative;
+    padding: 56px 0;
+    overflow: hidden;
+}
+
+.collection .container {
+    position: relative;
+}
+
+.collection .container::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: -18px;
+    width: 265px;
+    height: 382px;
+    background: url("shema.png") no-repeat center;
+    background-size: contain;
+    z-index: 0;
+}
+
+.collection-header,
+.products {
+    position: relative;
+    z-index: 1;
+}
+
+.collection-header {
+    margin-bottom: 32px;
+}
+
+.collection-header h2 {
+    font-family: "RussischeElsevier", serif;
+    font-size: 50px;
+    letter-spacing: 5%;
+    font-weight: 400;
+}
+
+.collection-header p {
+    padding-top: 2px;
+    width: 60%;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+/* PRODUCTS */
+
+.products {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    max-width: 1000px;
+    gap: 16px;
+    align-items: stretch;
+    padding: 0px 0px;
+}
+
+/* правая колонка */
+
+.products-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    font-family: "baskervillebold", serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #587495;
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+
+.product-card h3 a {
+    border-bottom: 0.1px solid #587495;
+    padding-bottom: 0.5px;
+    display: inline-block;
+}
+
+.product-card p {
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.product-card span {
+    font-size: 16px;
+}
+
+/* левая колонка */
+
+.product-card--large {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card--large a {
+    flex: 1;
+}
+
+.product-card--large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* FOOTER */
+
+.footer {
+    padding: 27px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-columns {
+    display: flex;
+    gap: 82px;
+}
+
+.footer-column h4 {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.footer-column li {
+    margin-bottom: 9px;
+    font-size: 14px;
+}
+
+.footer-column p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-column p.tel {
+    font-size: 20px;
+}
+
+/* Hover */
+
+a:hover{
+    opacity:.7;
+    color: #7b00ff;
+}
+
+/* Tablet */
+
+@media (max-width:992px){
+
+.container{
+    padding:0 20px;
+}
+
+.header-container {
+    width: 100%;
+    padding: 0 20px;
+}
+
+.hero{
+    height:auto;
+}
+
+.hero h1{
+    padding: 5% 0;
+    font-size:84px;
+}
+
+.aboutcollection p {
+    font-size: 26px;
+}
+
+.collection .container::after {
+    opacity: 35%;
+}
+
+.products {
+    grid-template-columns: 1fr;
+/*flex-direction: column;*/
+}
+
+.products-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card {
+    flex: 1;
+}
+
+.product-card--large{
+    grid-row:auto;
+}
+
+.product-card h3 {
+    font-size: 16pt;
+
+}
+
+.product-card p {
+    font-size: 14pt;
+    margin-bottom: 0px;
+}
+
+.product-card span {
+    font-size: 14pt;
+}
+
+.footer-content{
+    flex-direction:column;
+    gap:50px;
+}
+
+.footer-columns{
+    gap:40px;
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.container{
+    padding:0 10px;
+}
+
+.header-container {
+    width: 100%;
+    padding: 20px 10px;
+}
+
+.header-left {
+    flex-direction: column;
+    align-items: start;
+    gap: 0;
+}
+
+.header-content{
+    padding-top:20px;
+}
+
+.navigation-list{
+    gap: 8px;
+}
+
+.hero{
+    position: relative;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.hero-content{
+    position: absolute;
+    left: 10px;
+    bottom: 60px;
+    width:50%;
+}
+
+.hero h1{
+    padding: 0 0;
+    font-size:40px;
+}
+
+.aboutcollection p {
+    font-size: 24px;
+}
+
+.collection{
+    padding:60px 0;
+}
+
+.collection-header h2{
+    font-size:42px;
+}
+
+.collection-header p{
+    width:100%;
+    font-size:18px;
+}
+
+.products-right {
+        flex-direction: column;
+}
+
+.product-card h3 {
+    font-size: 14pt;
+
+}
+
+.product-card p {
+    font-size: 12pt;
+    margin-bottom: 0px;
+}
+
+.product-card span {
+    font-size: 12pt;
+}
+
+.footer-columns{
+    flex-direction:column;
+}
+
+}
