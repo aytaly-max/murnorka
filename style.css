@@ -323,6 +323,12 @@ body {
     font-size: 14px;
 }
 
+.footer-column a.active {
+    border-bottom: 0.1px solid #587495;
+    padding-bottom: 0.8px;
+    color: #587495;
+}
+
 .footer-column p {
     font-size: 14px;
     line-height: 1.5;
@@ -358,7 +364,8 @@ a:hover{
 
 .hero h1{
     font-size:84px;
-    padding: 0 10px;
+    max-width: 40%;
+    padding: 0 0px;
 }
 
 .aboutcollection p {
@@ -370,8 +377,7 @@ a:hover{
 }
 
 .products {
-    grid-template-columns: 1fr;
-/*flex-direction: column;*/
+    flex-direction: column;
 }
 
 .products-right {
@@ -442,7 +448,8 @@ a:hover{
 
 
 .hero h1{
-    font-size:40px;
+    font-size:44px;
+    padding: 0px 0px;
 }
 
 .aboutcollection {
@@ -464,6 +471,10 @@ a:hover{
 .collection-header p{
     width:100%;
     font-size:18px;
+}
+
+.products {
+    grid-template-columns: 1fr;
 }
 
 .products-right {
