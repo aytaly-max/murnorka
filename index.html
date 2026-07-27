@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мурнорка</title>
+    <link rel="icon" type="image/png" href="favicon.png">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -20,7 +21,7 @@
 
         <nav class="navigation">
             <ul class="navigation-list">
-                <li><a href="/collection" class="active">Коллекции</a></li>
+                <li><span href="/collection" class="active">Коллекции</span></li>
                 <li><a href="/about">О нас</a></li>
                 <li><a href="/contacts">Контакты</a></li>
             </ul>
@@ -72,78 +73,58 @@
         <div class="container">
 
             <div class="collection-header">
-
                 <h2>Боярка</h2>
-
                 <p>
                     баланс статуса и&nbsp;актуальности.
                     Органично вписывается в&nbsp;городские образы —
                     от&nbsp;пальто в&nbsp;стиле old money до&nbsp;стильного пуховика.
                 </p>
-
             </div>
 
 
             <div class="products">
 
-                <article class="product-card product-card--large">
-
-                    <a href="/mary">
+                <a href="/mary" class="product-card-link">
+                    <article class="product-card product-card--large">
                         <img
                             src="mary.png"
                             alt="Боярка Мэри">
-                    </a>
-
-                    <h3>
-                        <a href="/mary">Мэри</a>
-                    </h3>
-
-                    <p>Боярка из меха белого песца</p>
-
-                    <span>49 990 ₽</span>
-
-                </article>
+                        <div class="product-card__info">
+                            <h3 class="card-title">Мэри</h3>
+                            <p>Боярка из меха белого песца</p>
+                            <span>49 990 ₽</span>
+                        </div>
+                    </article>
+                </a>
 
                 <div class="products-right">
-
-                    <article class="product-card">
-
-                        <a href="/kitty">
+                    <a href="/kitty" class="product-card-link">
+                        <article class="product-card">
                             <img
                             src="kitty.png"
                             alt="Боярка Китти">
-                        </a>
+                            <div class="product-card__info">
+                                <h3 class="card-title">Китти</h3>
+                                <p>Боярка из меха песца</p>
+                                <span>31 000 ₽</span>
+                            </div>
+                        </article>
+                    </a>
 
-                        <h3>
-                        <a href="/kitty">Китти</a>
-                        </h3>
-
-                        <p>Боярка из меха песца</p>
-
-                        <span>31 000 ₽</span>
-
-                    </article>
-
-
-                    <article class="product-card">
-
-                        <a href="/tata">
-                        <img
+                    <a href="/tata" class="product-card-link">
+                        <article class="product-card">
+                            <img
                             src="tata.png"
                             alt="Боярка Тата">
-                        </a>
-
-                        <h3>
-                        <a href="/tata">Тата</a>
-                        </h3>
-
-                        <p>Боярка из меха соболя</p>
-
-                        <span>25 000 ₽</span>
-
-                    </article>
-
+                            <div class="product-card__info">
+                                <h3 class="card-title">Тата</h3>
+                                <p>Боярка из меха соболя</p>
+                                <span>25 000 ₽</span>
+                            </div>
+                        </article>
+                    </a>
                 </div>
+
             </div>
 
         </div>
@@ -169,7 +150,7 @@
 
                 <ul>
                     <li><a href="#">Пушистый ураган</a></li>
-                    <li><a href="#" class="active">Северный шёлк</a></li>
+                    <li><span href="#" class="active">Северный шёлк</span></li>
                     <li><a href="#">Тёплая зима</a></li>
                 </ul>
 
